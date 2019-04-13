@@ -66,6 +66,7 @@ buildGUI pdir =
       shell "rm -rf static/out.jsexe/*.externs" ""
       shell "rm -rf static/out.jsexe/*.stats" ""
       shell "rm -rf static/out.jsexe/*.webapp" ""
+      shell ("cp -R codemirror/ static/out.jsexe") ""
       shell ("cp -R " <> lineToText directory <> "/bin/haskell-do.jsexe/*.js static/out.jsexe") ""
       shell ("cp -R static " <> lineToText coreBinDirectory <> "/bin") ""
       return ()
